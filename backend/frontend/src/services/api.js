@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// URL do ngrok - atualize quando reiniciar o ngrok
-const BASE_URL = 'https://awkward-mundane-gopher.ngrok-free.dev';
+// URL da API no Render (produção)
+const BASE_URL = 'https://food-nutrition-analyzer-6k31.onrender.com';
 
 const api = axios.create({
   baseURL: BASE_URL,
@@ -27,8 +27,9 @@ export const analyzeFood = async (imageUri) => {
 
     return response.data;
   } catch (error) {
+    console.error('Erro na API:', error.response?.data || error.message);
     throw error;
   }
 };
-s
+
 export default api;

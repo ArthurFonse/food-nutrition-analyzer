@@ -1,29 +1,48 @@
 {
   "expo": {
-    "name": "frontend",
-    "slug": "frontend",
+    "name": "Food Nutrition Analyzer",
+    "slug": "food-nutrition-analyzer",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.arthurfonse.foodnutritionanalyzer"
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
-      }
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.arthurfonse.foodnutritionanalyzer",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Precisamos acessar suas fotos para analisar alimentos.",
+          "cameraPermission": "Precisamos acessar sua câmera para fotografar alimentos."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "2127882b-a14f-456f-ad0c-7012468acc9a"
+      }
     }
   }
 }
